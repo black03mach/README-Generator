@@ -152,10 +152,11 @@ inquirer
             message: 'What is your email address?',
             name: 'email',
             validate: email => {
+                var email2 = email.includes("@")
                 if (email.legnth < 1) {
                     return "GitHub username is mandatory."
                 }
-                else if(){
+                else if(email2 != true){
                     return "Not a valid email."
                 }
                 else {
@@ -209,7 +210,7 @@ inquirer
         data2Write += "\n";
         data2Write += `Github username ` + `${response.github}\n`;
         data2Write += "https://github.com/black03mach\n";
-        data2Write += `Email: ` + `${response.email}\n`;
+        data2Write += `Please contact me @ Email: ` + `${response.email} with any questions/concerns.\n`;
 
         fs.writeFile('readme-out.md', data2Write, 'utf8', err => {
             if (err) return console.log(err);
@@ -228,7 +229,7 @@ inquirer
 // THEN a badge for that license is added hear the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
 // WHEN I enter my GitHub username -- Done
 // THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile -- Done
-// WHEN I enter my email address 
-// THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
+// WHEN I enter my email address -- Done
+// THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions -- Done
 // WHEN I click on the links in the Table of Contents
 // THEN I am taken to the corresponding section of the README

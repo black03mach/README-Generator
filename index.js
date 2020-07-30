@@ -208,9 +208,9 @@ inquirer
         data2Write += "\n";
         data2Write += "## Questions\n";
         data2Write += "\n";
-        data2Write += `Github username ` + `${response.github}\n`;
+        data2Write += `Github username: ` + `${response.github}\n`;
         data2Write += "https://github.com/black03mach\n";
-        data2Write += `Please contact me @ Email: ` + `${response.email} with any questions/concerns.\n`;
+        data2Write += `Please contact me via email: ` + `${response.email} with any questions/concerns.\n`;
 
         fs.writeFile('readme-out.md', data2Write, 'utf8', err => {
             if (err) return console.log(err);
@@ -220,8 +220,8 @@ inquirer
     });
 // GIVEN a command-line application that accepts user input
 // WHEN I am prompted for information about my application repository
-// THEN a quality, professional README.md is generated with the title of your project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-// WHEN I enter my project title
+// THEN a quality, professional README.md is generated with the title of your project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions -- Done
+// WHEN I enter my project title -- Done
 // THEN this is displayed as the title of the README -- Done
 // WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions -- Done
 // THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests -- Done

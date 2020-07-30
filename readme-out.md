@@ -1,4 +1,4 @@
-# testest
+# test test
 
 ## User
 
@@ -6,30 +6,30 @@ patwells
 
 ## Password
 
-lololo
+redbull
 
 ## Description
 
-testing for a test
+to test the functionality of the homework
 
 ## Installation Instructions
 
-MTF
+Inquirer is needed. 
 
 ## Usage Information
 
-to test 
+To generate a readme
 
 ## Contribution Guidelines
 
-testing testing
+None at the moment
 
 ## Testing Instructions
 
-testing now 
+None at the moment
 
 ## Questions
 
-Github username patwells
+Github username black03mach
 https://github.com/black03mach
-Email: patwells@gmail.con
+Please contact me @ Email: pat.taylorwells@gmail.com with any questions/concerns.

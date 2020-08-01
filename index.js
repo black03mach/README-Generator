@@ -1,9 +1,6 @@
-// Use activity 14, 15. Use the NPMJS website.
 const inquirer = require('inquirer');
 const PasswordPrompt = require('inquirer/lib/prompts/password');
 const fs = require('fs');
-
-
 
 inquirer
     .prompt([
@@ -123,7 +120,7 @@ inquirer
         {
             type: 'list',
             message: 'Which licensure will be used for this application?',
-            choices: ["BSD", "ISC", "MIT", "NCSA"],
+            choices: ["BSD", "ISC", "MIT", "Boost"],
             name: 'license',
             validate: license => {
                 if (license.length < 1) {
@@ -156,7 +153,7 @@ inquirer
                 if (email.legnth < 1) {
                     return "GitHub username is mandatory."
                 }
-                else if(email2 != true){
+                else if (email2 != true) {
                     return "Not a valid email."
                 }
                 else {
@@ -166,21 +163,44 @@ inquirer
         },
 
     ]).then(response => {
-        // this will call the EXACT input value.
-        // console.log(response.user);
-        // console.log(response.password)
         console.log(response)
-
-        // fs.writeFile('readme-out.md', JSON.stringify(response, null, 2), 'utf8', err => {
-        //     if(err) return console.log(err);
-        //     return console.log("We finished writing the file.")
-        // });
         let data2Write = "";
+        switch (response.license){
+            case "BSD":
+                data2Write += "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)\n"
+                break;
+            case "ISC":
+                data2Write += "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)\n"
+                break;
+            case "MIT":
+                data2Write += "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT\n)"
+                break;
+            case "Boost":
+                data2Write += "[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)\n"
+                break;
+        }
+        data2Write += "\n";
+        data2Write += "* [User](##user)\n";
+        data2Write += "\n";
+        data2Write += "* [Password](##password)\n";
+        data2Write += "\n";
+        data2Write += "* [Description](##description)\n";
+        data2Write += "\n";
+        data2Write += "* [Installation Instructions](##installation-instructions)\n";
+        data2Write += "\n";
+        data2Write += "* [Usage Information](##usage-information)\n";
+        data2Write += "\n";
+        data2Write += "* [Contribution Guidelines](##contribution-guidelines)\n";
+        data2Write += "\n";
+        data2Write += "* [Testing Instructions](##testing-instructions)\n";
+        data2Write += "\n";
+        data2Write += "* [Questions](##questions)\n";
+        data2Write += "\n";
         data2Write += `# ${response.title}\n`;
         data2Write += "\n";
-        data2Write += "## User\n"; // make a function for this?
+        data2Write += "## User\n";
         data2Write += "\n";
-        data2Write += `${response.user}\n`; // make a function for the data? "data2Write += addNewSection("Site", response.whatever)
+        data2Write += `${response.user}\n`;
         data2Write += "\n";
         data2Write += "## Password\n";
         data2Write += "\n";
@@ -216,20 +236,4 @@ inquirer
             if (err) return console.log(err);
             return console.log("We finished writing the file.")
         });
-
     });
-// GIVEN a command-line application that accepts user input
-// WHEN I am prompted for information about my application repository
-// THEN a quality, professional README.md is generated with the title of your project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions -- Done
-// WHEN I enter my project title -- Done
-// THEN this is displayed as the title of the README -- Done
-// WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions -- Done
-// THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests -- Done
-// WHEN I choose a license for my application from a list of options -- Done
-// THEN a badge for that license is added hear the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-// WHEN I enter my GitHub username -- Done
-// THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile -- Done
-// WHEN I enter my email address -- Done
-// THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions -- Done
-// WHEN I click on the links in the Table of Contents
-// THEN I am taken to the corresponding section of the README

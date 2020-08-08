@@ -1,49 +1,53 @@
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT
+)
 * [User](##user)
 
 * [Password](##password)
 
 * [Description](##description)
 
-[Installation Instructions](##installation-instructions)
-[Usage Information](##usage-information)
-[Contribution Guidelines](##contribution-guidelines)
-[Testing Instructions](##testing-instructions)
-[Questions](##questions)
+* [Installation Instructions](##installation-instructions)
 
-# sdaflk;ajkl;sdf
+* [Usage Information](##usage-information)
+
+* [Contribution Guidelines](##contribution-guidelines)
+
+* [Testing Instructions](##testing-instructions)
+
+* [Questions](##questions)
+
+# README GENERATOR
 
 ## User
 
-fkl;asdfj;
+pwells44
 
 ## Password
 
-sadflkjsadljk;f
+Ls5@1018
 
 ## Description
 
-dsflkjasdfjkl;a
+To automate README creation.
 
 ## Installation Instructions
 
-sadfklj;asdfjkl;as
+this application requires Inquirer. Run yarn install Inquirer
 
 ## Usage Information
 
-sdafklasdjfasdf
+To generate a generic readme template
 
 ## Contribution Guidelines
 
-asdfl;kmsadl;fas
+No idea.
 
 ## Testing Instructions
 
-flkasdf
+No testing required
 
 ## Questions
 
-Github username: sadkl;flj;a
+Github username: black03mach
 https://github.com/black03mach
-Please contact me via email: @@@@@ with any questions/concerns.
+Please contact me via email: pat.taylorwells@gmail.com with any questions/concerns.
